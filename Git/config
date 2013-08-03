@@ -1,0 +1,20 @@
+# config (git) v1.0.0
+# The global Git config file.
+# www.brianspeir.com
+#
+# Copyright (C) 2013 Brian Speir. All rights reserved.
+#
+# Licensed under The BSD 3-Clause License. You may not use this file except
+# in compliance with the License. You may obtain a copy of the License at
+# http://opensource.org/licenses/BSD-3-Clause
+
+
+[user]
+    name = Brian Speir
+    email = no-reply@brianspeir.com
+[core]
+    editor = nano
+    excludesfile = $HOME/Library/Preferences/Git/ignore
+    autocrlf = input
+[color]
+    ui = true

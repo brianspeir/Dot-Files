@@ -1,0 +1,18 @@
+# aliases v1.0.0
+# The individual string substitution file.
+# www.brianspeir.com
+#
+# Copyright (C) 2013 Brian Speir. All rights reserved.
+#
+# Licensed under The BSD 3-Clause License. You may not use this file except
+# in compliance with the License. You may obtain a copy of the License at
+# http://opensource.org/licenses/BSD-3-Clause
+
+
+# List all entries. When used with the -l option, Print the Access Control List
+# (ACL) associated with the file, if present and use unit suffixes: Byte,
+# Kilobyte, Megabyte, Gigabyte, Terabyte and Petabyte.
+alias ls='ls -Aeh'
+
+# Interrogate DNS name server for zone file.
+alias dig='dig -tAXFR'

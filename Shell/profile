@@ -1,0 +1,43 @@
+# profile v1.0.0
+# The individual initialization file, executed for login shells.
+# www.brianspeir.com
+#
+# Copyright (C) 2013 Brian Speir. All rights reserved.
+#
+# Licensed under The BSD 3-Clause License. You may not use this file except
+# in compliance with the License. You may obtain a copy of the License at
+# http://opensource.org/licenses/BSD-3-Clause
+
+
+# Environmental Variables ---------------------------------------------------#
+
+# The name of the file to which the command history is saved.
+export HISTFILE="$HOME/Library/Application Support/Shell/history"
+
+# Expand the maximum number of commands to remember on the history list.
+export HISTSIZE=5000
+
+# The individual string substitution file.
+if [[ -r "$HOME/Library/Preferences/Shell/aliases" ]]; then
+    . "$HOME/Library/Preferences/Shell/aliases"
+fi
+
+# The individual paths file.
+if [[ -r "$HOME/Library/Preferences/Shell/paths" ]]; then
+    . "$HOME/Library/Preferences/Shell/aliases"
+fi
+
+# The individual variable file that points to sensitive data.
+if [[ -r "$HOME/Library/Preferences/Shell/private" ]]; then
+    . "$HOME/Library/Preferences/Shell/private"
+fi
+
+# The individual source file, points to application specific profiles.
+if [[ -r "$HOME/Library/Preferences/Shell/sources" ]]; then
+    . "$HOME/Library/Preferences/Shell/sources"
+fi
+
+# The individual per-interactive-shell startup file.
+if [[ "${BASH-no}" != "no" ]]; then
+    [[ -r $HOME/Library/Preferences/Bash/bashrc ]] && . $HOME/Library/Preferences/Bash/bashrc
+fi

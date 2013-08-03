@@ -1,0 +1,65 @@
+# ignore (git) v1.0.0
+# The global Git ignore file.
+# www.brianspeir.com
+#
+# Copyright (C) 2013 Brian Speir. All rights reserved.
+#
+# Licensed under The BSD 3-Clause License. You may not use this file except
+# in compliance with the License. You may obtain a copy of the License at
+# http://opensource.org/licenses/BSD-3-Clause
+
+
+# Compiled source ---------------------------------------------------------- #
+
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages ----------------------------------------------------------------- #
+
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases ------------------------------------------------------- #
+
+*.log
+*.sql
+*.sqlite
+
+# OS ----------------------------------------------------------------------- #
+
+.DocumentRevisions-V100/
+.PKInstallSandboxManager/
+.Spotlight-V100/
+.Trash/
+.Trashes/
+# Used by Core Foundation to determine default text encoding.
+.CFUserTextEncoding
+.DS_Store
+.file
+.fseventsd
+Icon?
+# System display names for directories, files and apps.
+.localized
+.OSInstallMessages
+.vol
+
+# Keys and Such ------------------------------------------------------------ #
+
+Keychains/
+id_rsa
+id_rsa-*
+id_rsa.pub
+*.key
+.keychain
+secring.gpg
+

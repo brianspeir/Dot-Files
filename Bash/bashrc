@@ -1,0 +1,65 @@
+# bashrc v1.0.0
+# The individual per-interactive-shell startup file.
+# www.brianspeir.com
+#
+# Copyright (C) 2013 Brian Speir. All rights reserved.
+#
+# Licensed under The BSD 3-Clause License. You may not use this file except
+# in compliance with the License. You may obtain a copy of the License at
+# http://opensource.org/licenses/BSD-3-Clause
+
+
+# Prints the primary prompt string $. Otherwise if the effective uid is 0,
+# prints the current working directory on host with a WARNING that you are
+# working as root and the primary prompt string #.
+PS1="$(if [[ ${EUID} == 0 ]]; then
+           echo '\n\[\e[34m\]\w\[\e[0m\] on \H\n\[\e[31m\e[41m\]WARNING\$\[\e[0m\] '
+       else
+           echo '\n\$ '
+       fi)"
+
+if [[ -r "$HOME/Library/Preferences/Bash/inputrc" ]]; then
+    export INPUTRC="$HOME/Library/Preferences/Bash/inputrc"
+fi
+
+# Appearance ----------------------------------------------------------------#
+
+# Use color sequences to distinguish file types.
+export CLICOLOR=1
+
+# Describe what colors to use for which attributes when colors are enabled.
+export LSCOLORS=exfxcxdxbxegedhbacagdD
+
+# Mark up the matching text.
+export GREP_OPTIONS='--color=auto'
+
+export CLICOLOR LSCOLORS GREP_OPTIONS
+
+# Filename expansion --------------------------------------------------------#
+
+# Include filenames beginning with a ‘.’ in the results of filename expansion.
+shopt -s dotglob
+
+# Matche filenames in a case-insensitive fashion when performing filename expansion.
+shopt -s nocaseglob
+
+# History -------------------------------------------------------------------#
+
+# The name of the file to which the command history is saved.
+# export HISTFILE="$HOME/Library/Application Support/Bash/bash_history"
+
+# Expand the maximum number of lines contained in the history file.
+export HISTFILESIZE=5000
+
+# Expand the maximum number of commands to remember on the history list.
+# export HISTSIZE=5000
+
+# Lines which begin with a space character or match a previous history entry
+# are not saved in the history list.
+export HISTCONTROL="ignoreboth:erasedups"
+
+# Patterns used to decide which command lines should not be saved in the history list.
+export HISTIGNORE="cd:date:echo:exit:ls:ls -l:pwd:rm:sudo -i:sudo -s:sudo su"
+
+# The history list is appended to the file when the shell exits, rather than overwriting the file.
+shopt -s histappend
