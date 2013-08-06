@@ -14,7 +14,7 @@
     email = no-reply@brianspeir.com
 [core]
     editor = nano
-    excludesfile = $HOME/Library/Preferences/Git/ignore
+    excludesfile = ~/Library/Preferences/Git/ignore
     autocrlf = input
 [color]
     ui = true
