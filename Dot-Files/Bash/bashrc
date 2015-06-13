@@ -18,7 +18,7 @@
 # prints the current working directory on host with a WARNING that you are
 # working as root and the primary prompt string #.
 PS1="$(if [[ ${EUID} == 0 ]]; then
-           echo '\n\[\e[34m\]\w\[\e[0m\] on \H\n\[\e[31m\e[41m\]WARNING\$\[\e[0m\] '
+           echo '\n   \[\e[34m\]\w\[\e[0m\] on \H\n\[\e[1m\e[41m\]\u\[\e[0m\] : '
        else
            echo '\n   \$ : '
        fi)"
