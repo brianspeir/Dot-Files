@@ -20,7 +20,7 @@
 PS1="$(if [[ ${EUID} == 0 ]]; then
            echo '\n\[\e[34m\]\w\[\e[0m\] on \H\n\[\e[31m\e[41m\]WARNING\$\[\e[0m\] '
        else
-           echo '\n\$ '
+           echo '\n   \$ : '
        fi)"
 
 if [[ -r "$HOME/Library/Preferences/Bash/inputrc" ]]; then
