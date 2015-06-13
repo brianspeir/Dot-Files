@@ -1,0 +1,26 @@
+# System .gitignore. Referenced from /etc/gitconfig
+
+.DS_Store
+.DocumentRevisions-V100/
+.PKInstallSandboxManager/
+.Spotlight-V100/
+.Trashes/
+.file
+.fseventsd
+.vol
+
+# System display names for directories, files and apps.
+.localized
+
+# System and User Keychains
+.keychain
+.keychain-orig
+
+# Used by Core Foundation to determine default text encoding.
+.CFUserTextEncoding
+
+
+
+
+Icon
+Icon?

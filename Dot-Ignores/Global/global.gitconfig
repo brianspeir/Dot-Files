@@ -1,0 +1,10 @@
+[core]
+	excludesfile = ~/.gitignore_global
+	autocrlf = input
+[user]
+	name = Brian Speir
+	email = no-reply@brianspeir.com
+[mergetool]
+	keepBackup = true
+[color]
+	ui = true
